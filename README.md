@@ -13,17 +13,20 @@ At [http://felsin9.de/nnis/ghc-vis](http://felsin9.de/nnis/ghc-vis)
 
 # Installation
 
-## Windows and Stack
+## Linux
 
 1) Once
 
 ```sh
-$ stack exec -- pacman -S mingw-w64-x86_64-pkg-config mingw-w64-x86_64-gtk3 mingw-w64-x86_64-gtk2 wget unzip 
-$ stack exec -- echo 'export PATH=/c/graphviz/bin:$PATH' >> ~/.bashrc
+$ stack exec -- pacman -S (find version of gtk3) (find version of gtk2)
+$ stack exec -- echo 'export PATH={path to graphviz bin directory}:$PATH' >> ~/.bashrc
 $ stack install gtk2hs-buildtools glib cairo pango gtk
 $ git clone https://github.com/def-/ghc-vis.git
 $ stack install
 ```
+
+1.1) On Mac
+    brew install gtk+3
 
 2) Each time
 
